@@ -1,12 +1,12 @@
 [API_KEYS]
-OPENAI = ""
-GROQ = ""
-ANTHROPIC = ""
-GEMINI = ""
+#OPENAI = ""
+#GROQ = ""
+#ANTHROPIC = ""
+#GEMINI = ""
 
 [API_ENDPOINTS]
 OLLAMA = "http://eos.lan:11434"
-SEARXNG = "http://eos.lan:4075"
+SEARXNG = "http://searxng.docker.lan:4000"
 
 [GENERAL]
 PORT = 3_001

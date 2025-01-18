@@ -14,8 +14,6 @@ services:
       - backend-dbstore:/home/perplexica/data
       - uploads:/home/perplexica/uploads
       - ./config.toml:/home/perplexica/config.toml
-    extra_hosts:
-      - 'host.docker.internal:host-gateway'
     networks:
       - perplexica-network
     restart: unless-stopped
@@ -26,8 +24,8 @@ services:
       context: .
       dockerfile: app.dockerfile
       args:
-        - NEXT_PUBLIC_API_URL=http://eos.lan:3001/api
-        - NEXT_PUBLIC_WS_URL=ws://eos.lan:3001
+        - NEXT_PUBLIC_API_URL=http://0.0.0.0:3001/api
+        - NEXT_PUBLIC_WS_URL=ws://0.0.0.0:3001
     image: perplexica-frontend:main
     depends_on:
       - backend
